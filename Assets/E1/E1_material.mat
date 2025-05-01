@@ -101,12 +101,12 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Intersection_Depth: -0.1
+    - _Intersection_Depth: 0.23
     - _Lineas_frecuence: 5
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Power_glow: 5.32
+    - _Power_glow: 1.83
     - _Power_glow_color: 2.93
     - _QueueControl: 0
     - _QueueOffset: 0

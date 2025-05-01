@@ -100,12 +100,12 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _IntersectionDepth: 0.3
+    - _IntersectionDepth: 1.2
     - _LinesFrequency: 50
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PowerGlow: 3.6
+    - _PowerGlow: 2.08
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ScanlineSpeed: 1

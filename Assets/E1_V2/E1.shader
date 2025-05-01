@@ -94,9 +94,10 @@ Shader "Unlit/E1"
                 float sceneDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos)));
                 float thisDepth = LinearEyeDepth(i.screenPos.z / i.screenPos.w);
                 float depthDiff = saturate((sceneDepth - thisDepth) / _IntersectionDepth);
+
                 texColor.rgb += _BaseColor.rgb * depthDiff;
 
-                // Alpha affected by fresnel
+                // Alpha 
                 texColor.a = _Alpha * fresnel;
 
                 return texColor;
