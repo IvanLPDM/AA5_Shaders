@@ -13,6 +13,11 @@ Shader "Unlit/E1"
         //Geometry Intersection
         _IntersectionDepth("Intersection Depth", Float) = 0.1
 
+        //ScanLines
+        _ScanLineSpeed("Scanline Speed", Float) = 5
+        _LineFrequency("Line Frequency", Float) = 20
+        _ScanlineContrast("Scanline Contrast", Float) = 10
+
         _Alpha("Alpha", Range(0,1)) = 1
         [Enum(Alpha,0,Additive,1)] _BlendMode("Blend Mode", Float) = 0
     }
@@ -59,6 +64,9 @@ Shader "Unlit/E1"
             float _Alpha;
             float _IntersectionDepth;
             sampler2D _CameraDepthTexture;
+            float _ScanLineSpeed;
+            float _LineFrequency;
+            float _ScanlineContrast;
 
             v2f vert (appdata v)
             {
@@ -79,26 +87,35 @@ Shader "Unlit/E1"
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag(v2f i) : SV_Target
             {
+                // Sample texture
                 fixed4 texColor = tex2D(_MainTex, i.uv);
 
-                // Base color 
-                texColor.rgb *= _BaseColor.rgb;
+                // --- SCANLINES ---
+                float2 rawScreenUV = i.screenPos.xy / i.screenPos.w;  // raw screen position
+                float scan = frac(rawScreenUV.y * _LineFrequency + _Time.y * _ScanLineSpeed); // scrolling lines
+                scan = saturate(scan * _ScanlineContrast); // sharpen with contrast
+                texColor.rgb *= scan; // apply scanline to texture directly
 
-                // Fresnel
+                // --- Fresnel ---
                 float fresnel = pow(1.0 - saturate(dot(normalize(i.viewDir), normalize(i.worldNormal))), _PowerGlow);
-                texColor.rgb += _BaseColor.rgb * fresnel;
 
-                // Intersection glow
-                float sceneDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos)));
-                float thisDepth = LinearEyeDepth(i.screenPos.z / i.screenPos.w);
-                float depthDiff = saturate((sceneDepth - thisDepth) / _IntersectionDepth);
+                // --- Geometry Intersection ---
+                float rawDepth = i.screenPos.z / i.screenPos.w; // Fragment depth
+                float sceneDepth = SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos)).r;
+                sceneDepth = LinearEyeDepth(sceneDepth);
 
-                texColor.rgb += _BaseColor.rgb * depthDiff;
+                float screenDepth = LinearEyeDepth(rawDepth);
+                float depthDiff = sceneDepth - (screenDepth - _IntersectionDepth);
 
-                // Alpha 
-                texColor.a = _Alpha * fresnel;
+                float intersection = smoothstep(0, 1, -depthDiff);
+
+                // --- Color ---
+                float combinedGlow = fresnel + intersection;
+
+                texColor.rgb = _BaseColor.rgb * (texColor.rgb + combinedGlow);
+                texColor.a = _Alpha * combinedGlow;
 
                 return texColor;
             }
