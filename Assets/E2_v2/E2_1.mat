@@ -146,7 +146,7 @@ Material:
     - _Metallic: 0
     - _NormalStrength: 1.47
     - _NormalStrengthA: 1.12
-    - _NormalStrengthB: 1.04
+    - _NormalStrengthB: 1.51
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
