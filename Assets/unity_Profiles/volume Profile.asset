@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: volume Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 2642649419834567050}
---- !u!114 &2642649419834567050
+  - {fileID: 7429101353343979590}
+--- !u!114 &7429101353343979590
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,10 +32,10 @@ MonoBehaviour:
     value: 1
   pulseColor:
     overrideState: 1
-    value: {r: 0.66753924, g: 0.018277498, b: 0, a: 1}
+    value: {r: 1, g: 0, b: 0, a: 1}
   pulseSpeed:
     overrideState: 1
     value: 2
   pulseWidth:
     overrideState: 1
-    value: -1.54
+    value: 1
