@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 42
+  controlID: 40
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3914,7 +3914,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 43
+  controlID: 41
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3939,7 +3939,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 44
+  controlID: 42
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4003,9 +4003,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dcfaffff
-      m_LastClickedID: -1316
-      m_ExpandedIDs: f2faffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 28fbffff946d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -4374,9 +4374,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.403099, y: -6.119773, z: 4.239812}
+    m_Target: {x: 114.75578, y: -53.635334, z: 67.00367}
     speed: 2
-    m_Value: {x: 12.403099, y: -6.119773, z: 4.239812}
+    m_Value: {x: 114.75578, y: -53.635334, z: 67.00367}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -4422,13 +4422,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.40574124, y: -0.0021724557, z: -0.0015281115, w: -0.91444874}
+    m_Target: {x: 0.29163206, y: -0.036052424, z: 0.0128302565, w: 0.9561849}
     speed: 2
-    m_Value: {x: -0.40419468, y: -0.00079723046, z: -0.0021370146, w: -0.9146701}
+    m_Value: {x: 0.29153392, y: -0.03460421, z: 0.0123878205, w: 0.9558541}
   m_Size:
-    m_Target: 8.883751
+    m_Target: 74.911194
     speed: 2
-    m_Value: 8.501197
+    m_Value: 71.685356
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -4575,7 +4575,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 108
+  controlID: 57
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4648,7 +4648,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/E3/Art
+    - Assets/E3
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -4656,16 +4656,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/E3/Art
+  - Assets/E3
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Ivan Leris\Desktop\4t\Shaders\AA5_Shaders
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 118.20001}
-    m_SelectedIDs: bc700000
-    m_LastClickedID: 28860
-    m_ExpandedIDs: 00000000486e00004a6e00000c70000010700000b870000000ca9a3bffffff7f
+    m_SelectedIDs: da6f0000
+    m_LastClickedID: 28634
+    m_ExpandedIDs: 000000001e6e0000206e0000da6f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4693,7 +4693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000486e00004a6e0000
+    m_ExpandedIDs: 000000001e6e0000206e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4718,8 +4718,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: dcfaffff
-    m_LastClickedInstanceID: -1316
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000a46b000036020000
     m_RenameOverlay:
@@ -5194,6 +5194,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   brushSettingsAsset: {fileID: 11400000, guid: b500714014c5feb488d68ed65d9daa56, type: 2}
 --- !u!114 &16
 MonoBehaviour:
@@ -5219,7 +5223,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 157
+  controlID: 149
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52

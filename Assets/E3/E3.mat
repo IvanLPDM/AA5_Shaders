@@ -62,7 +62,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
         m_Texture: {fileID: 2800000, guid: 3cc1006d309fec54c9e91df280c47296, type: 3}
-        m_Scale: {x: 3, y: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -78,7 +78,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 922e9426c6c3c93449dbe40426935096, type: 3}
-        m_Scale: {x: 100, y: 100}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -111,27 +111,32 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
+    - _CalmSpeed: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DepthDarkenStrength: 0.04
+    - _DepthFactor: 0.02
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FlowSpeed: 5
-    - _FlowStrength: 0
+    - _FlowSpeed: 0.4
+    - _FlowStrength: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NormalScale: 1
+    - _NormalSpeed: 0.05
     - _NormalStrength: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _SlopeFactor: 0.01
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -139,10 +144,11 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _WaterDepthStrength: 1
+    - _WaterHeight: -2.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.12941173, g: 0.79607844, b: 0.74509805, a: 0.78039217}
+    - _BaseColor: {r: 0.32452828, g: 0.9359933, b: 1, a: 0.78039217}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeepColor: {r: 0, g: 0.09999997, b: 0.29999998, a: 0.5}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
