@@ -50,7 +50,7 @@ Shader "Unlit/E2"
 
             float _NormalStrengthA;
             float _NormalStrengthB;
-            float4 _TilingOffset; // x, y = tiling; z, w = offset
+            float4 _TilingOffset;
 
             v2f vert (appdata v)
             {
