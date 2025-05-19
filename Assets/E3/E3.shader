@@ -1,4 +1,4 @@
-Shader "Unlit/E3_ColorOnly_TransparentWithNormal_FlowFrac"
+Shader "Unlit/E3"
 {
     Properties
     {
