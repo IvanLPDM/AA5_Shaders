@@ -1,0 +1,4 @@
+https://github.com/IvanLPDM/AA5_Shaders_v2.git
+
+He puesto el render pipeline correcto y he hecho cambios en el triplanar shader y en el ping shader. El Terrain deformation solo se puede ver en el proyecto entregado en clase. 
+Gracias por la oportunidad.
